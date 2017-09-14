@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TraVitaApp.LoginPage"
+             Title="Login"
+             BackgroundColor="#E1F5FE">
+    <StackLayout Padding="50" Orientation="Vertical" VerticalOptions="StartAndExpand">
+        <StackLayout Orientation="Horizontal" >
+            <Image Source="user.png" HorizontalOptions="Start" HeightRequest="30"/>
+            <Entry x:Name="MobileNo" Text="{Binding MobileNo}" Placeholder="Mobile No." WidthRequest="250" TextColor="#0D47A1"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" >
+            <Image Source="key.png" HorizontalOptions="Start" HeightRequest="30"/>
+            <Entry x:Name="RegId" Text="{Binding RegId}" Placeholder="Registration Number" WidthRequest="250" TextColor="#0D47A1"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button WidthRequest="250" 
+                    FontSize="Large" Text="LOGIN" BackgroundColor="#0D47A1" TextColor="White" FontSize="Medium" Clicked="Button_Clicked"/>
+        </StackLayout>
+        <Label Text="Don't have an account?Sign up" HorizontalOptions="Center" TextColor="#0D47A1" HorizontalTextAlignment="End" FontSize="Small"/>
+
+    </StackLayout>
+</ContentPage>

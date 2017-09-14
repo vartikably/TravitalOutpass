@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TraVitaApp.FrontPage"
+             Title="Leave Application"
+             BackgroundColor="#E1F5FE">
+    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+       
+        <Label Text="Enter the following details for applying for leave: " TextColor="#0D47A1"/>
+        
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Date of Leaving" HorizontalOptions="Start" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="#0D47A1"/>
+            <DatePicker x:Name="DateofLeaving"  TextColor="#0D47A1" WidthRequest="200"  Date="{Binding SomeDate}"  Format="dd/mm/yyyy"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Date of Arriving"  TextColor="#0D47A1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <DatePicker x:Name="DateofArriving"  TextColor="#0D47A1" WidthRequest="200" Date="{Binding Arriving Date}" Format="dd/mm/yyyy"/>
+        </StackLayout>
+
+        <Picker x:Name="Reason" Title="Reason for Staying Out" TextColor="#0D47A1" SelectedIndexChanged="Reason_SelectedIndexChanged" TextColor="#0D47A1">
+            <Picker.Items>
+                <x:String>Festival</x:String>
+                <x:String>Weekend</x:String>
+                <x:String>Summer Vaccations</x:String>
+                <x:String>Winter Vaccation</x:String>
+                <x:String>Other Reason</x:String>
+            </Picker.Items>
+        </Picker>
+        <Button Text="Proceed" BackgroundColor="#0D47A1" TextColor="White" FontSize="Medium" Clicked="Button_Clicked" />
+            </StackLayout>
+
+</ContentPage>
